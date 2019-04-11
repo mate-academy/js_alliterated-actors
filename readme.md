@@ -1,4 +1,4 @@
-# Boilerplate for JS tasks
+# Alliterated Actors
 
 **Read the guideline before start**
 

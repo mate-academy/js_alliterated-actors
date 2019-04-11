@@ -1,8 +1,8 @@
 {
-  "name": "js-task-boilerplate",
+  "name": "alliterated-actors",
   "version": "1.0.0",
-  "description": "js task boilerplate",
-  "main": "src/sum.js",
+  "description": "Alliterated Actors",
+  "main": "src/alliteratedActors.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
