@@ -19,7 +19,7 @@
  *
  * @param {string[]} names
  *
- * @return {string[]}
+ * @return {string}
  */
 function alliteratedActors(names) {
   // write code here
