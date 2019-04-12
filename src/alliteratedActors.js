@@ -22,7 +22,11 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  for (let i = 0; i < names.length; i++) {
+    let letter = names[i][0];
+    if ((names[i].split(' ').length) === (names[i].split(letter).length - 1)) {
+      return names[i];
+    }
+  }
 }
-
 module.exports = alliteratedActors;
