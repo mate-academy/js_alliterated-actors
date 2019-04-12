@@ -22,7 +22,21 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find(function(name) {
+    var words = name.split(' ');
+    const l = words.length;
+    if (l < 2) return false;
+    if (l === 2) {
+      return words[0][0] === words[1][0];
+    }
+    if (l === 3) {
+      return (words[0][0] === words[1][0]) &&
+             (words[0][0] === words[2][0]);
+    } else {
+      return (words[0][0] === words[1][0]) &&
+             (words[0][0] === words[2][0]) &&
+             (words[0][0] === words[3][0]);
+    }
+  });
 }
-
 module.exports = alliteratedActors;
