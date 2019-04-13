@@ -23,6 +23,11 @@
  */
 function alliteratedActors(names) {
   // write code here
+  let namesWithN = [];
+  namesWithN = names.find(name => name.split(' ')
+    .every(firstName => firstName[0] === name[0]));
+
+  return namesWithN;
 }
 
 module.exports = alliteratedActors;
