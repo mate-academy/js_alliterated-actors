@@ -23,11 +23,7 @@
  */
 function alliteratedActors(names) {
   const sortNames = names.find(name => {
-    const div = name.split(' ');
-    const findToken = div.every(token => token.includes(div[1][0]));
-    if (findToken) {
-      return name;
-    }
+    return name.split(' ').every(token => token.includes(name[0][0]));
   });
   return sortNames;
 }
