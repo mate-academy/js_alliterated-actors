@@ -22,7 +22,15 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
-}
+  const alliteratedName = names.find(isAlliteratedName);
 
+  function isAlliteratedName(fullName) {
+    const splitNames = fullName.split(' ');
+    const firstLetter = splitNames[0][0].toUpperCase();
+    return splitNames.every((i) => i[0] === firstLetter)
+      ? fullName
+      : undefined;
+  }
+  return alliteratedName;
+}
 module.exports = alliteratedActors;
