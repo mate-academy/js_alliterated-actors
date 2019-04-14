@@ -23,8 +23,8 @@
  */
 function alliteratedActors(names) {
   const sameLetters = names.find(name => {
-    return name.split(' ').every(letter => {
-      return name[0] === letter[0];
+    return name.split(' ').every(word => {
+      return name[0] === word[0];
     });
   });
   return sameLetters;
