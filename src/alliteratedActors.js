@@ -23,6 +23,13 @@
  */
 function alliteratedActors(names) {
   // write code here
+  return names.find(function(celebritie) {
+    let partsOfFullName = celebritie.split(' ');
+    let firstLetterOfName = partsOfFullName[0].charAt(0);
+    return partsOfFullName.every(function(onePart) {
+      return firstLetterOfName === onePart.charAt(0);
+    });
+  });
 }
 
 module.exports = alliteratedActors;
