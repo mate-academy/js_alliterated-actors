@@ -25,7 +25,7 @@ function alliteratedActors(people) {
   const alliteratedName = people.find(person => {
     const fullName = person.split(' ');
     const firsLetter = fullName[0][0];
-    return fullName.every(name => name[0][0] === firsLetter);
+    return fullName.every(name => name[0] === firsLetter);
   });
 
   return alliteratedName;
