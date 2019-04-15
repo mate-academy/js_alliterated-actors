@@ -22,7 +22,20 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  let namesSameLet = [];
+  let namesSameLetCount = 0;
+  namesSameLet = names.filter(function(item) {
+    let arrayOfNames = item.split(' ');
+    if ((arrayOfNames.every(el => el[0] === arrayOfNames[0][0])) &&
+      namesSameLetCount === 0) {
+      namesSameLetCount++;
+      return true;
+    } else return false;
+  });
+  if (namesSameLet.length === 0) {
+    return undefined;
+  } else {
+    return namesSameLet.join(' ');
+  }
 }
-
 module.exports = alliteratedActors;
