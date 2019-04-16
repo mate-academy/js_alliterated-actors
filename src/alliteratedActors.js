@@ -22,17 +22,13 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  let namesSame = [];
-  namesSame = names.find(function(item) {
+  let alliteratedNames = [];
+  alliteratedNames = names.find(function(item) {
     let arrayOfNames = item.split(' ');
     if (arrayOfNames.every(el => el[0] === arrayOfNames[0][0])) {
       return true;
     } else return false;
   });
-  if (namesSame === undefined) {
-    return undefined;
-  } else {
-    return namesSame;
-  }
+  return alliteratedNames;
 }
 module.exports = alliteratedActors;
