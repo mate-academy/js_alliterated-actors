@@ -23,8 +23,8 @@
  */
 function alliteratedActors(names) {
   return names.find(el => {
-    let fullNames = el.split(' ');
-    let letter = fullNames[0][0];
+    const fullNames = el.split(' ');
+    const letter = fullNames[0][0];
     return fullNames.every(name => name.includes(letter));
   });
 }
