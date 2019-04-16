@@ -25,9 +25,7 @@ function alliteratedActors(names) {
   let alliteratedNames = [];
   alliteratedNames = names.find(function(item) {
     let arrayOfNames = item.split(' ');
-    if (arrayOfNames.every(el => el[0] === arrayOfNames[0][0])) {
-      return true;
-    } else return false;
+    return arrayOfNames.every(el => el[0] === arrayOfNames[0][0]);
   });
   return alliteratedNames;
 }
