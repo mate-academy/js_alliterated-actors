@@ -35,6 +35,14 @@ test('Ten people', () => {
     .toEqual('Vnnchyxwx Vxot');
 });
 
+test('Uppercase letter in the middle of the word', () => {
+  expect(alliteratedActors(['Wn Tjuyol', 'Eyd Gjvxav', 'Wjuybt Hc Fiwyr',
+      'Vpikwvhgj Kt', 'Epuq Jji', 'Ohp Vt', 'Ufqmup gdqhUwrv',
+      'Ydbwtqwfl Rmjfebpn', 'Qghj Ujc', 'Amy Adams'
+    ]))
+    .toEqual('Amy Adams');
+});
+
 test('15 people', () => {
   expect(alliteratedActors(
     ['Fruekg Tkbzuj', 'Feqghnxfr Kkjc', 'Ze Htax Ddqwdzopd',
