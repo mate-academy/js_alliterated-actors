@@ -2,69 +2,41 @@
 
 const alliteratedActors = require('./alliteratedActors');
 
-test('No names', () => {
+test('Should work with empty array', () => {
   expect(alliteratedActors([]))
     .toEqual(undefined);
 });
 
-test('Some actors', () => {
+test('Should return only first concurrence', () => {
   expect(alliteratedActors(
     ['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
       'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams']))
     .toEqual('Sylvester Stallone');
 });
 
-test('Some actors and movie directors', () => {
-  expect(alliteratedActors(
-    ['Harrison Ford', 'Robert De Niro', 'Morgan Freeman', 'Matt Damon',
-      'Christofer Nolan', 'Natalie Portman', 'Martin Scorsese', 'Nick Nolte']))
-    .toEqual('Nick Nolte');
-});
-
-test('Five people', () => {
+test('Should return undefined when none of the names is alliterated ', () => {
   expect(alliteratedActors(
     ['Fpzwpgpq Vswaed Eagbsm', 'Qv Owj', 'Wzucu Qmwrw', 'Djnrai Uvrwyh',
       'Naclcthdv Bpooabnvt Gwpfsy']))
     .toEqual(undefined);
 });
 
-test('Ten people', () => {
-  expect(alliteratedActors(['Wn Tjuyol', 'Eyd Gjvxav', 'Wjuybt Hc Fiwyr',
-    'Vpikwvhgj Kt', 'Epuq Jji', 'Ohp Vt', 'Ufqmup Gdqhwwrv',
+test('Should work with three-word name', () => {
+  expect(alliteratedActors(['Wn Tjuyol', 'Eyd Gjvxav', 'Hjuybt Hc Fiwyr',
+    'Vpikwvhgj Kt', 'Epuq Jji', 'Ohp Op Ot', 'Ufqmup Gdqhwwrv',
     'Ydbwtqwfl Rmjfebpn', 'Qghj Ujc', 'Vnnchyxwx Vxot']))
-    .toEqual('Vnnchyxwx Vxot');
+    .toEqual('Ohp Op Ot');
 });
 
-test('Uppercase letter in the middle of the word', () => {
+test('Should work only with first letter uppercase', () => {
   expect(alliteratedActors(['Wn Tjuyol', 'Eyd Gjvxav', 'Wjuybt Hc Fiwyr',
-      'Vpikwvhgj Kt', 'Epuq Jji', 'Ohp Vt', 'Ufqmup gdqhUwrv',
+      'Vpikwvhgj Kt', 'Epuq Jji', 'Ohp Vt', 'Ufqmup udqhUwrv',
       'Ydbwtqwfl Rmjfebpn', 'Qghj Ujc', 'Amy Adams'
     ]))
     .toEqual('Amy Adams');
 });
 
-test('15 people', () => {
-  expect(alliteratedActors(
-    ['Fruekg Tkbzuj', 'Feqghnxfr Kkjc', 'Ze Htax Ddqwdzopd',
-      'Gzcf Irlaq Yeik', 'Ydxm Bxc', 'Rnox Jezdi Rlaxfri', 'Hdbl Qbkljtnm',
-      'Nwpyzd Zmvssr', 'Wodat Jdxpmbeup Ckbd', 'Dso Sqdxncc',
-      'Lyxjn Inhcz Fyxk', 'Par Uttdrohpe Vtinlvo', 'Qyykxp Zakqtjyqp Cxbe',
-      'Vcu Pmnsqsst Sp', 'Ryf Vukqztpi']))
-    .toEqual(undefined);
-});
-
-test('20 people', () => {
-  expect(alliteratedActors(
-    ['Ypyl Judv', 'Fpggjio Wrzxesgfd Fugjjjkre', 'Nup Fdmjgt Aoo',
-      'Iyybltinv Ziwfmugd Kcjm', 'It Wbio', 'Hqbk Ymqlng', 'Eim Kshhh Vhd',
-      'Hfcgrfc Spn', 'Lhasd Cqvqv Ufpzfmby', 'Se Sbrnbupbz', 'Vbzu Lqgsp Uf',
-      'Gwgddsw Xmdjjgnh', 'Tcs Sjev', 'Wspx Adk Pdrryakvg',
-      'Pxolmhrn Sgbtsbupv Vvxrukd', 'Mxdc Epibfozg Aei', 'Tt Xxakv',
-      'Isjvoe Jqpaeyn', 'Slyt Ooico', 'Cdntzahce Ayz']))
-    .toEqual('Se Sbrnbupbz');
-});
-
-test('Four-word name', () => {
+test('Should work with four-word name', () => {
   expect(alliteratedActors(
     ['Rgrliwb Rb Ratting Qua', 'Plzgmcsw Hhda',
       'Khtmyyak Erarbodsw Ivsle', 'Pnpz Piyqg Plij Pat', 'Dwvlzkxl Jqf',
