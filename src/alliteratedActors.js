@@ -22,8 +22,8 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const result = names.find( (person) => {
-    return (person.split(" ")).every( (name) => name[0] === person[0] );
+  const result = names.find( person => {
+    return person.split(' ').every( name => name[0] === person[0] );
   })
   return result;
 }
