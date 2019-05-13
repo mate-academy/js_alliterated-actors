@@ -22,9 +22,7 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  return names.find( person => {
-    person.split(' ').every( name => name[0] === person[0] );
-  })
+  return names.find( person => person.split(' ').every( name => name[0] === person[0] );
 }
 
 module.exports = alliteratedActors;
