@@ -27,8 +27,8 @@ test('Should work with three-word name', () => {
 });
 
 test('Should work only with first letter uppercase', () => {
-  expect(alliteratedActors(['Wn Tjuyol', 'Ufqmup udqhUwrv', 
-    'Qghj Ujc Qht', 'Amy Adams']))
+  expect(alliteratedActors(['Wn Tjuyol', 'Ufqmup udqhUwrv', 'Qghj Ujc Qht',
+    'Amy Adams']))
     .toEqual('Amy Adams');
 });
 
