@@ -22,12 +22,12 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const identicalFirstLettersInFullName = names.find((fullName) =>
+  const matchedName = names.find((fullName) =>
     fullName.split(' ')
       .every((partName) =>
         fullName[0] === partName[0]));
 
-  return identicalFirstLettersInFullName;
+  return matchedName;
 }
 
 module.exports = alliteratedActors;
