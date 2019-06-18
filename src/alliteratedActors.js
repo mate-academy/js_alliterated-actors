@@ -23,8 +23,8 @@
  */
 const alliteratedActors = (names) => {
   return names.find(name => {
+    const firstChar = name[0];
     const array = name.split(' ');
-    const firstChar = name[0][0];
 
     return array.every(word => word[0] === firstChar);
   });
