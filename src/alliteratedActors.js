@@ -22,6 +22,16 @@
  * @return {string}
  */
 function alliteratedActors(names) {
+  const literatedActor = names.find(firstActorWithLitStr);
+  function firstActorWithLitStr(arr) {
+    const firstLetter = arr[0];
+    const nameParts = arr.split(' ');
+    function isFirstLetterEqual(part) {
+      return part[0] === firstLetter;
+    };
+    return nameParts.every(isFirstLetterEqual);
+  };
+  return literatedActor;
   // write code here
 }
 
