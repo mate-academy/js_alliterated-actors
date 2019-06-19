@@ -23,6 +23,11 @@
  */
 function alliteratedActors(names) {
   // write code here
+  return names.find(name => {
+    const firstChar = name[0];
+    const arrayOfNames = name.split(' ');
+    return arrayOfNames.every(word => word[0] === firstChar);
+  });
 }
 
 module.exports = alliteratedActors;
