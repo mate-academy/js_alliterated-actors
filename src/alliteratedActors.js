@@ -14,7 +14,8 @@
  * alliterated as well, you do not need to include it in what you return, as
  * Sylvester Stallone's name comes before it.
  *
- * You are encouraged to use the `find` and `every` array methods to solve this
+ * You are encouraged to use the `find` and `every` array methods to solve
+ * //this
  * problem. Please do not use `for` or any other kind of loop.
  *
  * @param {string[]} names
@@ -22,7 +23,14 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const startSameLetter = names.find(name => {
+    const firstLetter = name.charAt(0);
+    const divideFullName = name.split(' ');
+
+    return divideFullName.every(thisName => firstLetter === thisName.charAt(0));
+  });
+
+  return startSameLetter;
 }
 
 module.exports = alliteratedActors;
