@@ -22,7 +22,15 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const result = names.filter((item) => {
+    const firstLetter = item[0];
+    const name = item.split(' ');
+    const filteredName = name.filter((part) => {
+      return part[0] === firstLetter;
+    });
+    return name.length === filteredName.length;
+  });
+  return result[0];
 }
 
 module.exports = alliteratedActors;
