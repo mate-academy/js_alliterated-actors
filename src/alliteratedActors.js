@@ -22,11 +22,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const callback = (item) => {
+  const result = names.find((item) => {
     const actors = item.split(' ');
     return actors.every(actor => actor[0][0] === actors[1][0]);
-  };
-  const result = names.find(callback);
+  });
   console.log(result);
   return result;
 }
