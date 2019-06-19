@@ -23,6 +23,14 @@
  */
 function alliteratedActors(names) {
   // write code here
+  const result = names.map(name => name.split(' '))
+    .find(arr => arr.every(str => str[0] === arr[0][0]));
+
+  if (result === undefined) {
+    return undefined;
+  }
+
+  return result.join(' ');
 }
 
 module.exports = alliteratedActors;
