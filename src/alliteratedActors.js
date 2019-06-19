@@ -30,5 +30,4 @@ function alliteratedActors(names) {
   console.log(result);
   return result;
 }
-
 module.exports = alliteratedActors;
