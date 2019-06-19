@@ -22,7 +22,17 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  function sameFirstLetter(word, index, arr) {
+    return word[0] === arr[0][0];
+  }
+
+  function takeVeryFirstName(name) {
+    return name.split(' ').every(sameFirstLetter);
+  }
+
+  const findName = names.find(takeVeryFirstName);
+
+  return findName;
 }
 
 module.exports = alliteratedActors;
