@@ -22,6 +22,12 @@
  * @return {string}
  */
 function alliteratedActors(names) {
+  const literatedActor = names.find(person => {
+    const firstLetter = person[0];
+    const nameParts = person.split(' ');
+    return nameParts.every(part => part.startsWith(firstLetter));
+  });
+  return literatedActor;
   // write code here
 }
 
