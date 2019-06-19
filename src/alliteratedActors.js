@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement alliteratedActors function:
  *
@@ -21,8 +20,12 @@
  *
  * @return {string}
  */
-function alliteratedActors(names) {
-  // write code here
-}
-
+const alliteratedActors = names => {
+  return names.find(name => {
+    const separatedName = name.split(' ');
+    return separatedName.every(part =>
+      name.charAt(0) === part.charAt(0)
+    );
+  });
+};
 module.exports = alliteratedActors;
