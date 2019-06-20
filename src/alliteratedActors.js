@@ -26,8 +26,8 @@ function alliteratedActors(names) {
     personName
       .split(' ')
       .every(
-        (partName, notUsedVar, fullName) =>
-          partName[0] === fullName[0][0]
+        (partName) =>
+          partName[0] === personName.split(' ')[0][0]
       )
   );
 }
