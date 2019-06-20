@@ -22,14 +22,14 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const findFirstPartOfLetter = person => {
+  const findFirstPartOfName = person => {
     const firstLeter = person.charAt(0);
     const partPerson = person.split(' ');
 
     return partPerson.every(item => firstLeter === item.charAt(0));
   };
 
-  const nameActors = names.find(findFirstPartOfLetter);
+  const nameActors = names.find(findFirstPartOfName);
 
   return nameActors;
 }
