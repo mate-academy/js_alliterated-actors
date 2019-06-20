@@ -22,7 +22,22 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const alliterateActor = names.find(name => {
+    const firstLetterOfName = name[0];
+    const partsOfName = name.split(' ');
+    return partsOfName.every(part => {
+      return part[0] === firstLetterOfName;
+    });
+  });
+  return alliterateActor;
 }
+alliteratedActors([
+  'Tom Hanks',
+  'Julia Roberts',
+  'James Earl Jones',
+  'Sylvester Stallone',
+  'Leonardo DiCaprio',
+  'Amy Adams',
+]);
 
 module.exports = alliteratedActors;
