@@ -22,13 +22,13 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const arrAlliteratedActors = names.find(function(elem) {
-    const conditionalIteratedActors = elem.split(' ');
-    return conditionalIteratedActors.every(function(str) {
+  const firstAlliteratedActor = names.find(function(elem) {
+    const namePartsAlliteratedActor = elem.split(' ');
+    return namePartsAlliteratedActor.every(function(str) {
       return elem[0] === str[0];
     });
   });
-  return arrAlliteratedActors;
+  return firstAlliteratedActor;
 }
 
 module.exports = alliteratedActors;
