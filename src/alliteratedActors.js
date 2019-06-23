@@ -23,6 +23,11 @@
  */
 function alliteratedActors(names) {
   // write code here
-}
+  return names.find(startWithTheSameLetter);
+};
 
+function startWithTheSameLetter(nameFull) {
+  const nameSplitted = nameFull.split(' ');
+  return nameSplitted.every(namePart => namePart[0] === nameFull[0]);
+}
 module.exports = alliteratedActors;
