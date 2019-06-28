@@ -22,7 +22,17 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find((element) => {
+    const splitLine = element.split(' ');
+    return splitLine.every((elem, index, fullName) => {
+      const keySymbol = fullName[0].charAt(0);
+      const firstSymbolLine = fullName[index].charAt(0);
+      if (keySymbol !== firstSymbolLine) {
+        return;
+      }
+      return fullName;
+    });
+  });
 }
 
 module.exports = alliteratedActors;
