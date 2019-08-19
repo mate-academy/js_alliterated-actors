@@ -29,9 +29,11 @@ function alliteratedActors(names) {
     const name2 = name.split(' ')[1];
     if (name1[0] === name2[0]) {
       return name;
-    }
+    } else { return undefined; }
   };
   names.find(callback);
 }
-
+alliteratedActors(
+  ['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
+    'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams']);
 module.exports = alliteratedActors;
