@@ -30,7 +30,6 @@ function alliteratedActors(names) {
     if (name1[0] === name2[0]) {
       return name;
     }
-    return undefined;
   };
   names.find(callback);
 }
