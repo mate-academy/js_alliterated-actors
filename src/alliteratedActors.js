@@ -24,7 +24,8 @@
 function alliteratedActors(names) {
   const alliteratedName = names
     .find(el => el.split(' ')
-      .every((name, index, array) => name[0] === array[0][0]));
+      .every((name, index, array) => name[0] === array[0][0])
+    );
 
   return alliteratedName;
 }
