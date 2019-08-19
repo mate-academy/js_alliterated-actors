@@ -21,17 +21,18 @@
  *
  * @return {string}
  */
+
 function alliteratedActors(names) {
   // write code here
   const callback = (name) => {
-    let name1 =  name.split(' ')[0];
-    let name2 = name.split(' ')[1];
-    if(name1[0] === name2[0]) {
+    const name1 = name.split(' ')[0];
+    const name2 = name.split(' ')[1];
+    if (name1[0] === name2[0]) {
       return name;
-      }
+    }
     return undefined;
-  }
-  const resultName = names.find(callback);
+  };
+  names.find(callback);
 }
 
 module.exports = alliteratedActors;
