@@ -25,6 +25,7 @@ function alliteratedActors(names) {
   return names.find(item => {
     const fullName = item.split(' ');
     const firstLetter = fullName[0][0];
+
     return fullName.every(el => el[0] === firstLetter);
   });
 }
