@@ -22,10 +22,9 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  return names.find(item => (
-    item
-      .split(' ')
-      .every((element, i, arr) => element.charAt(0) === arr[0].charAt(0))
+  return names.find(item => (item
+    .split(' ')
+    .every((element, i, arr) => element.charAt(0) === arr[0].charAt(0))
   ));
 }
 
