@@ -32,5 +32,8 @@
       "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "dependencies": {
+    "lint": "^0.7.0"
   }
 }
