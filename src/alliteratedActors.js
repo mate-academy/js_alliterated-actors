@@ -29,7 +29,6 @@ function alliteratedActors(names) {
       return name.charAt(0) === firstLetter;
     });
   });
-//     func
 }
 
 module.exports = alliteratedActors;
