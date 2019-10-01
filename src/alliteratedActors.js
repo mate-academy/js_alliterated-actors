@@ -22,7 +22,16 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  let alliteratedName;
+  names.find((e) => {
+    if ([...new Set(e.match(/^([A-Z])(?=.*)|(?<=.)\b[A-Z]|\b[a-z]/g))]
+      .length === 1) {
+      alliteratedName = e;
+      return alliteratedName;
+    }
+  });
+
+  return alliteratedName;
 }
 
 module.exports = alliteratedActors;
