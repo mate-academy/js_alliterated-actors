@@ -24,8 +24,7 @@
 function alliteratedActors(names) {
   let alliteratedName;
   names.find((e) => {
-    if ([...new Set(e.match(/^([A-Z])(?=.*)|(?<=.)\b[A-Z]|\b[a-z]/g))]
-      .length === 1) {
+    if ([...new Set(e.match(/^([A-Z])(?=.*)|(?<=.)\b[A-Z]|\b[a-z]/g))].length === 1) {
       alliteratedName = e;
       return alliteratedName;
     }
