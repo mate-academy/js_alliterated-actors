@@ -23,6 +23,11 @@
  */
 function alliteratedActors(names) {
   // write code here
+  return names.find(
+    people => people.split(' ').every(
+      parts => parts.startsWith(people[0])
+    )
+  );
 }
 
 module.exports = alliteratedActors;
