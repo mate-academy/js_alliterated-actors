@@ -22,7 +22,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find(function(name) {
+    const arrFirstLets = name.match(/\b\w/g);
+    return arrFirstLets.every(lett => arrFirstLets[0] === lett);
+  });
 }
 
 module.exports = alliteratedActors;
