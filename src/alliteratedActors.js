@@ -25,15 +25,9 @@ function alliteratedActors(names) {
   for (let i = 0; i < names.length; i++) {
     const name = names[i];
     const firstLeter = name[0];
-    let isSame = true;
-    name.split(' ').forEach(word => {
-      if (word[0] !== firstLeter) {
-        isSame = false;
-      }
-    });
-    if (isSame) {
+    if (name.split(' ').every(word => word[0] === firstLeter)) {
       return name;
-    }
+    };
   };
 }
 
