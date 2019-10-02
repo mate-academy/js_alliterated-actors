@@ -22,15 +22,7 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  let alliteratedName;
-  names.find((e) => {
-    if ([...new Set(e.match(/^([A-Z])(?=.*)|(?<=.)\b[A-Z]|\b[a-z]/g))].length === 1) {
-      alliteratedName = e;
-      return alliteratedName;
-    }
-  });
-
-  return alliteratedName;
+  return names.find((el) => el.split(' ').every(word => word.startsWith(el[0])));
 }
 
 module.exports = alliteratedActors;
