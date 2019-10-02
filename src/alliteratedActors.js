@@ -22,7 +22,19 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  for (let i = 0; i < names.length; i++) {
+    const name = names[i];
+    const firstLeter = name[0];
+    let isSame = true;
+    name.split(' ').forEach(word => {
+      if (word[0] !== firstLeter) {
+        isSame = false;
+      }
+    });
+    if (isSame) {
+      return name;
+    }
+  };
 }
 
 module.exports = alliteratedActors;
