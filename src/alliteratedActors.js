@@ -22,7 +22,11 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const callback = (name) => {
+    return name.split(' ').every(part => part.startsWith(name[0]));
+  };
+
+  return (names.find(callback));
 }
 
 module.exports = alliteratedActors;
