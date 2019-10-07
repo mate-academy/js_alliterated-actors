@@ -22,7 +22,7 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  return names.filter(item => item.split(' ').some(part => part[0] === 'N'));
+  return names.find(item => item.split(' ').every(n => n.startsWith(item[0])));
 }
 
 module.exports = alliteratedActors;
