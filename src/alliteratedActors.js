@@ -22,7 +22,9 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find(fullName => fullName.split(' ')
+    .every(partsOfFullName => partsOfFullName
+      .startsWith([...fullName].shift().toString())));
 }
 
 module.exports = alliteratedActors;
