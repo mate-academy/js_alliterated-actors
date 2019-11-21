@@ -22,7 +22,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find(element => {
+    const firstUpperCaseLetter = element[0][0];
+    return element.split(' ').every(item => item[0] === firstUpperCaseLetter);
+  });
 }
 
 module.exports = alliteratedActors;
