@@ -21,8 +21,12 @@
  *
  * @return {string}
  */
-function alliteratedActors(names) {
-  // write code here
-}
+// eslint-disable-next-line max-len
+const alliteratedActors = names => {
+  return names.find(nameItem => {
+    return nameItem.split(' ')
+      .every(item => item[0] === nameItem[0]);
+  });
+};
 
 module.exports = alliteratedActors;
