@@ -22,14 +22,8 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const result = names.find(person => {
-    const personName = person.split(' ');
-    const letter = personName[0][0];
-
-    if (personName.every(elem => elem[0] === letter)) {
-      return person;
-    }
-  });
+  const result = names.find(person => person.split(' ')
+    .every((elem, i, arr) => elem[0] === arr[0][0]));
 
   return result;
 }
