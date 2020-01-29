@@ -22,11 +22,9 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const match = names.find(function(name) {
-    const partsOfname = name.split(' ');
-
-    return partsOfname.every((part) => part[0] === name[0]);
-  });
+  const match = names.find((name) =>
+    name.split(' ').every((part) => part[0] === name[0])
+  );
 
   return match;
 }
