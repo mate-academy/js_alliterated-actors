@@ -22,7 +22,13 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const isSimilarFirstLetters = function(fullName, index, arr) {
+    const namesList = fullName.split(' ');
+
+    return namesList.every(item => item[0] === fullName[0]);
+  };
+
+  return names.find(isSimilarFirstLetters);
 }
 
 module.exports = alliteratedActors;
