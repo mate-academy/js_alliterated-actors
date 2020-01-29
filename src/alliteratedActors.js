@@ -22,10 +22,6 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  if (names.length === 0) {
-    return undefined;
-  }
-
   const firstLetters = names.map(item => item[0][0]);
 
   const firstAlliterated = names
@@ -33,7 +29,7 @@ function alliteratedActors(names) {
       .split(' ')
       .every((word) => word[0] === firstLetters[index]));
 
-  return firstAlliterated || undefined;
+  return firstAlliterated;
 }
 
 module.exports = alliteratedActors;
