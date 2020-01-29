@@ -21,8 +21,10 @@
  *
  * @return {string}
  */
-const alliteratedActors = (names) =>
-  (names.find(item => item.split(' ').every(element =>
-    (element.split('')[0] === item[0]))));
+const alliteratedActors = (names) => (
+  names.find(item => item.split(' ').every(element => (
+    element.split('')[0] === item[0]))
+  )
+);
 
 module.exports = alliteratedActors;
