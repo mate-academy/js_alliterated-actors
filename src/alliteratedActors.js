@@ -22,10 +22,10 @@
  * @return {string}
  */
 // eslint-disable-next-line max-len
-const alliteratedActors = names => {
-  return names.find(nameItem => {
-    return nameItem.split(' ')
-      .every(item => item[0] === nameItem[0]);
+const alliteratedActors = (names) => {
+  return names.find((personName) => {
+    return personName.split(' ')
+      .every(partOfName => partOfName[0] === personName[0]);
   });
 };
 
