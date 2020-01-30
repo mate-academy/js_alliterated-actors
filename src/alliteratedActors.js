@@ -22,13 +22,11 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  return names.find(name => {
-    return name.split(' ').every((partOfName, idx, allPartsOfName) => {
-      const firstLetter = allPartsOfName[0].split('')[0];
-
-      return partOfName[0] === firstLetter;
-    });
-  });
+  return names.find(name => name
+    .split(' ')
+    .every((partOfName, idx, fullName) =>
+      partOfName[0] === fullName[0]
+        .split('')[0]));
 }
 
 module.exports = alliteratedActors;
