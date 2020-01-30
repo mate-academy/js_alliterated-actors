@@ -23,10 +23,9 @@
  */
 function alliteratedActors(names) {
   const namesAlliterated = names.find(item => {
-    const name = item.split(' ');
-    const firstLetter = name[0][0][0];
-
-    return name.every(i => i.indexOf(`${firstLetter}`) === 0);
+    return item
+      .split(' ')
+      .every(i => i[0] === item[0]);
   });
 
   return namesAlliterated;
