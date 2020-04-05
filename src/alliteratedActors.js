@@ -23,7 +23,7 @@
  */
 function alliteratedActors(names) {
   return names.find(name => name.split(' ')
-    .every(word => word.charAt(0) === name.charAt(0))
+    .every(word => word.startsWith(name.charAt(0)))
   );
 }
 
