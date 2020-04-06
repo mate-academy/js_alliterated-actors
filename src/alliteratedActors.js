@@ -22,10 +22,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const callback = (elements) =>
-    elements.split(' ')
-      .every(element =>
-        element.charAt(0) === elements.charAt(0));
+  const callback = (name) =>
+    name.split(' ')
+      .every(partOfTheName =>
+        name.charAt(0) === partOfTheName.charAt(0));
 
   return names.find(callback);
 }
