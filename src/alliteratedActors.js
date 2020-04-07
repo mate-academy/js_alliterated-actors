@@ -8,7 +8,9 @@
  * parts of the name start with the same letter. If none of the names is
  * alliterated, return undefined.
  *
- * For example, if the array ['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
+ // eslint-disable-next-line max-len
+ * For example, if the array ['Tom Hanks Tanks Hanks', 'Julia Roberts',
+ * 'James Earl Jones',
  * 'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams'] is given, you must
  * return 'Sylvester Stallone'. Note that even though Amy Adams' name is
  * alliterated as well, you do not need to include it in what you return, as
@@ -22,7 +24,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find((item, index, arr) => {
+    return item.split(' ').every(word =>
+      word.startsWith(item[0].charAt(0)));
+  });
 }
 
 module.exports = alliteratedActors;
