@@ -23,6 +23,15 @@
  */
 function alliteratedActors(names) {
   // write code here
+  const callback = function(item, index, arr) {
+    const firstLetter = item.trim()[0];
+
+    if (item.split(' ').every(x => x[0] === firstLetter)) {
+      return item;
+    }
+  };
+
+  return names.find(callback);
 }
 
 module.exports = alliteratedActors;
