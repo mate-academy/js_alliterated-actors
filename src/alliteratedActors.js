@@ -22,7 +22,17 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const result = names.find(isPrime);
+
+  return result;
 }
 
+function isPrime(fullName) {
+  const firstChar = fullName[0];
+
+  return fullName.split(' ').every((element) => {
+    return element[0] === firstChar;
+  }
+  );
+}
 module.exports = alliteratedActors;
