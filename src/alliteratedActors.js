@@ -22,7 +22,10 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  const regex = /\b[A-Za-z]/g;
+
+  return names.find(name =>
+    (name.match(regex)).every(letter => letter === (name.match(regex)[0])));
 }
 
 module.exports = alliteratedActors;
