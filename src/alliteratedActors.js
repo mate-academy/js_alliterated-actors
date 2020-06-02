@@ -30,7 +30,4 @@ function alliteratedActors(names) {
   });
 }
 
-alliteratedActors(['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
-  'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams']);
-
 module.exports = alliteratedActors;
