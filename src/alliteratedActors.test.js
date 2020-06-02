@@ -9,7 +9,7 @@ test('Should work with empty array', () => {
 
 test('Should return only first occurence', () => {
   expect(alliteratedActors(
-    ['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
+    ['Tom Hanks', 'Julia Ruberts', 'James Earl Jones',
       'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams']))
     .toEqual('Sylvester Stallone');
 });
