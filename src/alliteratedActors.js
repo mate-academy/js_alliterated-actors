@@ -23,18 +23,12 @@
  */
 function alliteratedActors(names) {
   const callback = (unit) => {
-    const fullName = unit.split(' ');
-    let firstLetter = unit.split(' ');
-
-    firstLetter = firstLetter[0].charAt(0);
-
-    return fullName.every((word) => {
-      return (word[0] === firstLetter);
+    return unit.split(' ').every((word) => {
+      return (word[0] === unit[0]);
     });
   };
-  const result = names.find(callback);
 
-  return result;
+  return names.find(callback);
 }
 
 module.exports = alliteratedActors;
