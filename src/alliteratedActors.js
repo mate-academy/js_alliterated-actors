@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 /**
@@ -23,6 +24,10 @@
  */
 function alliteratedActors(names) {
   // write code here
+  return names.find(item => {
+    return item.split(' ').every(element =>
+      element[0] === item[0]);
+  });
 }
 
 module.exports = alliteratedActors;
