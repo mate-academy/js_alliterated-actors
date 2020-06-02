@@ -22,7 +22,11 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find(
+    name => name
+      .match(/\b[A-Z]{1}/g)
+      .every((val, i, arr) => val === arr[0] && arr.length > 1)
+  );
 }
 
 module.exports = alliteratedActors;
