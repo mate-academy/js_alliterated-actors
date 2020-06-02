@@ -22,9 +22,9 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  const callback = (unit) => {
-    return unit.split(' ').every((word) => {
-      return (word[0] === unit[0]);
+  const callback = (fullName) => {
+    return fullName.split(' ').every((singleName) => {
+      return (singleName[0] === fullName[0]);
     });
   };
 
