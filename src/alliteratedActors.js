@@ -22,7 +22,13 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  let name = [];
+  name = names.find(function(i) {
+    return i.split(' ').every(function(e) {
+      return i[0] === e[0];
+    });
+  });
+  return name;
 }
 
 module.exports = alliteratedActors;
