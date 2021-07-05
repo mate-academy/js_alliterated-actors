@@ -23,6 +23,13 @@
  */
 function alliteratedActors(names) {
   // write code here
+  const properNames = names.filter((name) => {
+    const nameSeparated = name.split(' ');
+    if (nameSeparated.every((part) => { return part[0] === name[0]; })) {
+      return name;
+    }
+  });
+  return properNames[0];
 }
 
 module.exports = alliteratedActors;
