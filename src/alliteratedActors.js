@@ -23,6 +23,15 @@
  */
 function alliteratedActors(names) {
   // write code here
+
+  const res = names.filter((x) => {
+    const pieces = x.split(' ');
+    const letter = pieces[0][0];
+
+    return pieces.every((piece) => piece.startsWith(letter));
+  });
+
+  return res[0];
 }
 
 module.exports = alliteratedActors;
