@@ -21,8 +21,12 @@
  *
  * @return {string}
  */
-function alliteratedActors(names) {
-  // write code here
-}
+const alliteratedActors = (names) => {
+  return names.find(name => {
+    const firstChar = name[0];
+    const array = name.split(' ');
 
+    return array.every(word => word[0] === firstChar);
+  });
+};
 module.exports = alliteratedActors;
