@@ -21,8 +21,20 @@
  *
  * @return {string}
  */
+
 function alliteratedActors(names) {
-  // write code here
+// function callback(name){
+//   const name1 = name.split(' ')[0];
+//   const name2 = name.split(' ')[1];
+//   return name1[0] === name2[0] ? name : undefined;
+//  почему ретерн не возвращает так ?
+// }
+  const nameRes = names.find(item => item.split(' ')
+    .every((name, index, array) => name[0] === array[0][0]));
+  return nameRes;
 }
 
+alliteratedActors(
+  ['Tom Hanks', 'Julia Roberts', 'James Earl Jones',
+    'Sylvester Stallone', 'Leonardo DiCaprio', 'Amy Adams']);
 module.exports = alliteratedActors;
