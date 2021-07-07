@@ -1,4 +1,7 @@
 {
+  "jest": {
+    "testEnvironment": "node"
+  },
   "name": "alliterated-actors",
   "version": "1.0.0",
   "description": "Alliterated Actors",
