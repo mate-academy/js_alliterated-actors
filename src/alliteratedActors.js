@@ -22,7 +22,9 @@
  * @return {string}
  */
 function alliteratedActors(names) {
-  // write code here
+  return names.find((item) => item.split(' ')
+    .every((name, i, arr) => Object.is(name[0], name[0]
+      .toUpperCase()) & arr[1].includes(name[0])));
 }
 
 module.exports = alliteratedActors;
