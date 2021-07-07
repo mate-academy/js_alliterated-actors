@@ -23,6 +23,13 @@
  */
 function alliteratedActors(names) {
   // write code here
+  return names.find(a => {
+    const find = a.match(/\b\w/g);
+
+    if (find.every((letter, i, arr) => letter === arr[0])) {
+      return a;
+    }
+  });
 }
 
 module.exports = alliteratedActors;
