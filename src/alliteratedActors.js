@@ -23,6 +23,13 @@
  */
 function alliteratedActors(names) {
   // write code here
-}
+  const namesWithN = names.filter(name => {
+    const splittedNames = name.split(' ');
+    return splittedNames.every(namePart => {
+      return namePart.startsWith(splittedNames[0][0]);
+    });
+  });
 
+  return namesWithN[0];
+}
 module.exports = alliteratedActors;
